@@ -1,0 +1,435 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'src/main.o', needed by 'main'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Tue May  3 14:30:32 2022
+
+# Variables
+
+# environment
+TMUX_PANE = %0
+# environment
+define FZF_DEFAULT_OPTS
+--height=20% 
+--preview="head -100 {}" 
+--preview-window=right:30%:wrap 
+--border 
+--inline-info 
+--layout=reverse
+--color=dark
+--color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
+--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
+endef
+# environment
+JAVA_HOME = /usr/lib/jvm/default
+# environment
+FZF_DIRS = /home/pablo/ /mnt/PABLO/ /usr/ /etc/
+# environment
+GDK_BACKEND = x11
+# makefile (from 'Makefile', line 18)
+OUTPUT := output
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 21)
+SRC := src
+# environment
+MPD_HOST = localhost
+# environment
+CHROME_EXECUTABLE = chromium
+# environment
+STARSHIP_SESSION_KEY = 1220322145168521
+# makefile (from 'Makefile', line 44)
+MD := mkdir -p
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d9684e75-d0ea-4343-b7ef-6ac6c87158f0.sock
+# environment
+VSCODE_CWD = /mnt/files/projects/Unioeste/matrix_cache
+# environment
+WINDOWID = 71303170
+# makefile (from 'Makefile', line 51)
+LIBS := -Llib
+# environment
+NVM_DIR = /home/pablo/.nvm
+# default
+MAKE_COMMAND := make
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/pablo/projects/Unioeste/matrix_cache
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+MAIL = /var/spool/mail/pablo
+# environment
+OLDPWD = /home/pablo/projects/Unioeste
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-397362.sock
+# environment
+NVM_INC = /home/pablo/.nvm/versions/node/v17.6.0/include/node
+# environment
+VSCODE_CODE_CACHE_PATH = /home/pablo/.config/Code/CachedData/dfd34e8260c270da74b5c2d86d61aee4b6d56977
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/pablo/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /mnt/files/projects/Unioeste/matrix_cache
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# makefile (from 'Makefile', line 65)
+OUTPUTMAIN := output/main
+# default
+.SHELLFLAGS := -c
+# environment
+NVM_BIN = /home/pablo/.nvm/versions/node/v17.6.0/bin
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = 
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+ZSH = /home/pablo/.oh-my-zsh
+# environment
+FZF_ALT_C_COMMAND = fd --type d --hidden -I -E "{.git,*node_modules*}" . /home/pablo/ /mnt/PABLO/ /usr/ /etc/
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 400000
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+TMUX = /tmp/tmux-1000/default,397828,0
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+FZF_DEFAULT_COMMAND = rg --files --hidden -l --sort path --no-messages --no-ignore -g "!{.git,*node_modules*}" . /home/pablo/ /mnt/PABLO/ /usr/ /etc/
+# makefile (from 'Makefile', line 48)
+INCLUDES := -Iinclude
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile', line 27)
+LIB := lib
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 24)
+INCLUDE := include
+# environment
+ANDROID_SDK_ROOT = /opt/android-sdk
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+ANDROID_HOME = /opt/android-sdk
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+DOTNET_BUNDLE_EXTRACT_BASE_DIR = /home/pablo/.cache/dotnet_bundle_extract
+# environment
+READER = zathura
+# environment
+SHLVL = 4
+# environment
+MAKELEVEL := 0
+# environment
+MPC_FORMAT = %file%
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+FLUTTER_HOME = /opt/flutter
+# environment
+PATH = /home/pablo/.node_modules/bin:/home/pablo/scripts/toys:/home/pablo/scripts/rofi-scripts/rofi-finder:/home/pablo/scripts/rofi-scripts/mode-scripts:/home/pablo/scripts/rofi-scripts/Community Projects:/home/pablo/scripts/rofi-scripts/rofi-surfraw:/home/pablo/scripts/rofi-scripts:/home/pablo/scripts/ascii:/home/pablo/scripts/remote/choose:/home/pablo/scripts/remote/actions:/home/pablo/scripts/remote:/home/pablo/scripts/:/home/pablo/.local/bin:/home/pablo/.node_modules/bin:/home/pablo/.node_modules/bin:/home/pablo/scripts/toys:/home/pablo/scripts/rofi-scripts/rofi-finder:/home/pablo/scripts/rofi-scripts/mode-scripts:/home/pablo/scripts/rofi-scripts/Community Projects:/home/pablo/scripts/rofi-scripts/rofi-surfraw:/home/pablo/scripts/rofi-scripts:/home/pablo/scripts/ascii:/home/pablo/scripts/remote/choose:/home/pablo/scripts/remote/actions:/home/pablo/scripts/remote:/home/pablo/scripts/:/home/pablo/.local/bin:/home/pablo/.node_modules/bin:/home/pablo/.nvm/versions/node/v17.6.0/bin:/opt/android-sdk/emulator:/home/pablo/scripts:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/emulator:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/home/pablo/.dotnet/tools:/opt/flutter/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/emulator:/opt/android-sdk/platform-tools/:/opt/android-sdk/tools/bin/:/opt/android-sdk/tools/:/home/pablo/.config/bspwm/bin:/home/pablo/.fzf/bin
+# environment
+CHROME_FLAGS = 
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_US.UTF-8:en
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 38)
+MAIN := main
+# makefile (from 'Makefile', line 41)
+LIBDIRS := lib
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+WINIT_X11_SCALE_FACTOR = 1.0
+# environment
+TERM_PROGRAM = tmux
+# environment
+DOCKER_HOST = unix:///run/user/1000/docker.sock
+# automatic
+?F = $(notdir $?)
+# environment
+GTK_CSD = 0
+# makefile (from 'Makefile', line 40)
+INCLUDEDIRS := include
+# environment
+AUTOJUMP_SOURCED = 1
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = 
+# environment
+ALACRITTY_LOG = /tmp/Alacritty-397362.log
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90::su=30;41:ow=30;42:st=30;44::su=30;41:ow=30;42:st=30;44:
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+LESS = -R
+# environment
+DESKTOP_SESSION = bspwm
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = 
+# makefile (from 'Makefile', line 57)
+OBJECTS := src/main.o
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+BROWSER = firefox
+# environment
+LOGNAME = pablo
+# environment
+FZF_CTRL_T_COMMAND = rg --files --hidden -l --sort path --no-messages --no-ignore -g "!{.git,*node_modules*}" . /home/pablo/ /mnt/PABLO/ /usr/ /etc/
+# environment
+TERMINAL = alacritty
+# environment
+XDG_VTNR = 1
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from 'Makefile', line 43)
+RM = rm -f
+# environment
+AUTOJUMP_ERROR_PATH = /home/pablo/.local/share/autojump/errors.log
+# environment
+EDITOR = nvim
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = pablo
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# makefile (from 'Makefile', line 42)
+FIXPATH = $1
+# environment
+STARSHIP_SHELL = zsh
+# makefile (from 'Makefile', line 39)
+SOURCEDIRS := src
+# environment
+MPD_PORT = 6600
+# environment
+PAGER = less
+# environment
+_ = /usr/bin/make
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+COLORTERM = truecolor
+# environment
+NVM_CD_FLAGS = -q
+# environment
+VISUAL = nvim
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/pablo
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-6c27201a-1.66.2-main.sock
+# environment
+TERM = xterm-256color
+# environment
+XDG_SESSION_ID = 2
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from 'Makefile', line 10)
+CXXFLAGS := -std=c++17 -Wall -Wextra -g
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# makefile (from 'Makefile', line 7)
+CXX = g++
+# makefile (from 'Makefile', line 15)
+LFLAGS = 
+# makefile (from 'Makefile', line 54)
+SOURCES := src/main.cpp
+# environment
+TERM_PROGRAM_VERSION = 3.2a
+# environment
+DOTNET_ROOT = /usr/share/dotnet
+# variable set hash-table stats:
+# Load=151/1024=15%, Rehash=0, Collisions=14/209=7%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# src (device 2050, inode 3531408): 3 files, no impossibilities.
+# . (device 2050, inode 3531403): 8 files, no impossibilities.
+
+# 11 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-03 14:29:33.000904465
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 85):
+	$(RM) $(OUTPUTMAIN)
+	$(RM) $(call FIXPATH,$(OBJECTS))
+	@echo Cleanup complete!
+
+.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 81):
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<  -o $@
+
+# Not a target:
+src/main.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+output:
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-03 14:29:32.997571148
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 71):
+	$(MD) $(OUTPUT)
+
+all: output main
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 68):
+	@echo Executing 'all' complete!
+
+run: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 90):
+	./$(OUTPUTMAIN)
+	@echo Executing 'run: all' complete!
+
+main: src/main.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 74):
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(OBJECTS) $(LFLAGS) $(LIBS)
+
+.PHONY: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=11/1024=1%, Rehash=0, Collisions=0/30=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 20 / storage = 149 B / avg = 7 B
+# current buf: size = 8162 B / used = 149 B / count = 20 / avg = 7 B
+
+# strcache performance: lookups = 40 / hit rate = 50%
+# hash-table stats:
+# Load=20/8192=0%, Rehash=0, Collisions=0/40=0%
+# Finished Make data base on Tue May  3 14:30:32 2022
+
+ 

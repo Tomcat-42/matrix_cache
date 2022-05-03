@@ -1,0 +1,9 @@
+{
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/mnt/files/projects/Unioeste/matrix_cache/output",
+      "binaryPath": "/mnt/files/projects/Unioeste/matrix_cache/output/main",
+      "binaryArgs": []
+    }
+  ]
+}
