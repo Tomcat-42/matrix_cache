@@ -5,5 +5,14 @@
       "binaryPath": "/mnt/files/projects/Unioeste/matrix_cache/output/main",
       "binaryArgs": []
     }
-  ]
+  ],
+  "files.associations": {
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    "*.tsx": "typescriptreact",
+    ".env.*": "dotenv",
+    ".prettierrc": "json",
+    "stdexcept": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
 }
