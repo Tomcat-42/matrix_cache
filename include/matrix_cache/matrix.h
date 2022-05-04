@@ -12,33 +12,41 @@ class Matrix {
 
  public:
   // constructors
-  Matrix(int, int, bool);
+  Matrix(int, int);
   Matrix(double **, int, int);
   Matrix(const Matrix &);
   Matrix();
   ~Matrix();
 
   // simple operations and operators
+  inline double &operator()(int x, int y) { return matrix[x][y]; }
   Matrix &operator=(const Matrix &);
   Matrix &operator/=(double);
+  Matrix &operator+(const Matrix &);
   Matrix &operator+=(const Matrix &);
   Matrix &operator-=(const Matrix &);
+  Matrix &operator-(const Matrix &);
   Matrix &operator*=(const Matrix &);
+  Matrix &operator*(const Matrix &);
   Matrix &operator*=(double);
-  inline double &operator()(int x, int y) { return matrix[x][y]; }
+  bool operator==(const Matrix &);
+  bool operator!=(const Matrix &);
 
   // transposition
   void swap_rows(int, int);
   Matrix transpose();
+
+  // randomization
+  Matrix &randomize(double, double);
 
   // matrix io
   friend std::ostream &operator<<(std::ostream &, const Matrix &);
   friend std::istream &operator>>(std::istream &, Matrix &);
 };
 
-Matrix operator+(const Matrix &, const Matrix &);
-Matrix operator-(const Matrix &, const Matrix &);
-Matrix operator*(const Matrix &, const Matrix &);
-Matrix operator*(const Matrix &, double);
-Matrix operator*(double, const Matrix &);
-Matrix operator/(const Matrix &, double);
+// Matrix operator+(const Matrix &, const Matrix &);
+// Matrix operator-(const Matrix &, const Matrix &);
+// Matrix operator*(const Matrix &, const Matrix &);
+// Matrix operator*(const Matrix &, double);
+// Matrix operator*(double, const Matrix &);
+// Matrix operator/(const Matrix &, double);

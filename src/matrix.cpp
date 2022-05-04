@@ -1,13 +1,22 @@
 #include <matrix_cache/matrix.h>
 #include <matrix_cache/utils.h>
 
+#include <algorithm>
+#include <random>
 #include <stdexcept>
 
 using std::domain_error;
 using std::endl;
+using std::fill;
+using std::generate;
 using std::istream;
 using std::ostream;
-using utils::get_random_value;
+using utils::absolute_tolerance_compare;
+using utils::RandomNumberBetween;
+
+using std::mt19937;
+using std::random_device;
+using std::uniform_real_distribution;
 
 // private methods
 void Matrix::alloc_mem() {
@@ -18,14 +27,13 @@ void Matrix::alloc_mem() {
 }
 
 /* Constructors and desructors overloadings */
-Matrix::Matrix(int rows, int cols, bool random = false)
-    : _rows(rows), _cols(cols) {
+Matrix::Matrix(int rows, int cols) : _rows(rows), _cols(cols) {
   alloc_mem();
   for (int i = 0; i < rows; i++) {
-    for (int j = 0; j < cols; j++) {
-      matrix[i][j] =
-          random ? get_random_value(MIN_RANDOM_SIZE, MAX_RANDOM_SIZE) : 0;
-    }
+    fill(matrix[i], matrix[i] + cols, 0);
+    // for (int j = 0; j < cols; j++) {
+    //   matrix[i][j] = 0;
+    // }
   }
 }
 
@@ -81,6 +89,22 @@ Matrix &Matrix::operator/=(double divisor) {
   return *this;
 }
 
+Matrix &Matrix::operator+(const Matrix &other) {
+  if (_rows != other._rows || _cols != other._cols) {
+    throw domain_error("Matrices must have the same dimensions");
+  }
+
+  Matrix *temp_matrix = new Matrix(_rows, _cols);
+
+  for (int i = 0; i < _rows; i++) {
+    for (int j = 0; j < _cols; j++) {
+      temp_matrix->matrix[i][j] = matrix[i][j] + other.matrix[i][j];
+    }
+  }
+
+  return *temp_matrix;
+}
+
 Matrix &Matrix::operator+=(const Matrix &other) {
   if (_rows != other._rows || _cols != other._cols) {
     throw domain_error("Matrices must have the same dimensions");
@@ -109,6 +133,22 @@ Matrix &Matrix::operator-=(const Matrix &other) {
   return *this;
 }
 
+Matrix &Matrix::operator-(const Matrix &other) {
+  if (_rows != other._rows || _cols != other._cols) {
+    throw domain_error("Matrices must have the same dimensions");
+  }
+
+  Matrix *temp_matrix = new Matrix(_rows, _cols);
+
+  for (int i = 0; i < _rows; i++) {
+    for (int j = 0; j < _cols; j++) {
+      temp_matrix->matrix[i][j] = matrix[i][j] - other.matrix[i][j];
+    }
+  }
+
+  return *temp_matrix;
+}
+
 Matrix &Matrix::operator*=(const Matrix &other) {
   if (_cols != other._rows) {
     throw domain_error("Matrices must have the same dimensions");
@@ -127,6 +167,24 @@ Matrix &Matrix::operator*=(const Matrix &other) {
   return (*this = temp_matrix);
 }
 
+Matrix &Matrix::operator*(const Matrix &other) {
+  if (_cols != other._rows) {
+    throw domain_error("Matrices must have the same dimensions");
+  }
+
+  Matrix *temp_matrix = new Matrix(_rows, other._cols);
+
+  for (int i = 0; i < _rows; i++) {
+    for (int j = 0; j < other._cols; j++) {
+      for (int k = 0; k < _cols; k++) {
+        temp_matrix->matrix[i][j] += matrix[i][k] * other.matrix[k][j];
+      }
+    }
+  }
+
+  return *temp_matrix;
+}
+
 Matrix &Matrix::operator*=(double factor) {
   for (int i = 0; i < _rows; i++) {
     for (int j = 0; j < _cols; j++) {
@@ -135,6 +193,24 @@ Matrix &Matrix::operator*=(double factor) {
   }
   return *this;
 }
+
+bool Matrix::operator==(const Matrix &other) {
+  bool result = true;
+  if (_rows != other._rows || _cols != other._cols) {
+    return false;
+  }
+
+  for (int i = 0; i < _rows; i++) {
+    for (int j = 0; j < _cols; j++) {
+      if (not absolute_tolerance_compare(matrix[i][j], other.matrix[i][j])) {
+        return false;
+      }
+    }
+  }
+  return result;
+}
+
+bool Matrix::operator!=(const Matrix &other) { return !operator==(other); }
 
 void Matrix::swap_rows(int row1, int row2) {
   double *temp = matrix[row1];
@@ -150,6 +226,16 @@ Matrix Matrix::transpose() {
     }
   }
   return temp_matrix;
+}
+
+Matrix &Matrix::randomize(double min = 0, double max = 1) {
+  RandomNumberBetween rnb(min, max);
+
+  for (int i = 0; i < _rows; i++) {
+    generate(matrix[i], matrix[i] + _cols, rnb);
+  }
+
+  return *this;
 }
 
 // matrix io
