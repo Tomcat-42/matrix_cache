@@ -14,7 +14,7 @@ include_directories( ./include ./src )
 
 # target
 # add_executable( binary ./src/main.cpp ./src/game_engine.cpp ./src/game_interface.cpp )
-add_executable( binary ./src/main.cpp )
+add_executable( binary ./src/main.cpp ./src/matrix.cpp ./src/utils.cpp )
 
 # external libs - 3rd party libs
 # add_subdirectory( ./libs/Logger )

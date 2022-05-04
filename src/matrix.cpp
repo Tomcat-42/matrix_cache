@@ -1,14 +1,13 @@
 #include <matrix_cache/matrix.h>
+#include <matrix_cache/utils.h>
 
-#include <random>
 #include <stdexcept>
 
-using std::default_random_engine;
 using std::domain_error;
 using std::endl;
 using std::istream;
 using std::ostream;
-using std::uniform_real_distribution;
+using utils::get_random_value;
 
 // private methods
 void Matrix::alloc_mem() {
@@ -16,12 +15,6 @@ void Matrix::alloc_mem() {
   for (int i = 0; i < _rows; i++) {
     matrix[i] = new double[_cols];
   }
-}
-
-double Matrix::get_random_value(double min, double max) {
-  uniform_real_distribution<double> distribution(min, max);
-  default_random_engine generator;
-  return distribution(generator);
 }
 
 /* Constructors and desructors overloadings */

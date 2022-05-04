@@ -9,7 +9,6 @@ class Matrix {
   double **matrix;
   int _rows, _cols;
   void alloc_mem();
-  double get_random_value(double min, double max);
 
  public:
   // constructors
