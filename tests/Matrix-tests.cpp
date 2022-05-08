@@ -232,25 +232,3 @@ TEST_F(MatrixBigTest, testMultiplicationTransposedposedNotEqual) {
   EXPECT_NE(matrix_multiplication_result != matrix_1_2_prod_, true)
       << "Matrix multiplication equal failed";
 }
-
-TEST(bench, testMultiplicationBenchmark) {
-  Matrix matrix_1(2000, 2000), matrix_2(2000, 2000), matrix_r(2000, 2000);
-  // act
-  matrix_1.randomize(0, 1e10);
-  matrix_2.randomize(0, 1e10);
-  matrix_r = matrix_1 * matrix_2;
-
-  // expect
-  EXPECT_EQ(true, true);
-}
-
-TEST(bench, testMultiplicationTransposedposedBenchmark) {
-  // arange
-  Matrix matrix_1(2000, 2000), matrix_2(2000, 2000), matrix_r(2000, 2000);
-  // act
-  matrix_1.randomize(0, 1e10);
-  matrix_2.randomize(0, 1e10);
-  matrix_r = matrix_1 ^ matrix_2.transpose();
-
-  // expect
-}
