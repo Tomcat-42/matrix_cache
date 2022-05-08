@@ -1,9 +1,11 @@
 #include <matrix_cache/utils.h>
 
+#include <iostream>
 #include <random>
 
-namespace utils {
+using namespace std;
 
+namespace utils {
 using std::fabs;
 using std::mt19937;
 using std::numeric_limits;
@@ -18,7 +20,10 @@ double RandomNumberBetween::operator()() {
 }
 
 bool absolute_tolerance_compare(double x, double y) {
-  return fabs(x - y) <= numeric_limits<double>::epsilon();
+  const double diff = fabs(x - y);
+  // const double epsilon = numeric_limits<double>::epsilon();
+  constexpr double epsilon = 1e-6;
+  const bool result = diff <= epsilon;
+  return result;
 }
-
 }  // namespace utils

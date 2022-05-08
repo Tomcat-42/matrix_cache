@@ -1,0 +1,6 @@
+#!/bin/env bash
+ROWS=${1:-0}
+COLS=${2:-0}
+NUM=$(bc <<< "$ROWS * $COLS")
+
+awk -v c=$COLS -v n=$NUM -v seed="$RANDOM" 'BEGIN { srand(seed); for (i=1; i<=n; i++) printf("%.4f%s", rand(), (i % c) == 0 ? "\n" : " ")  }'

@@ -185,6 +185,42 @@ Matrix &Matrix::operator*(const Matrix &other) {
   return *temp_matrix;
 }
 
+Matrix &Matrix::operator^=(const Matrix &other) {
+  if (_cols != other._cols) {
+    throw domain_error("Matrices must have the same dimensions");
+  }
+
+  Matrix temp_matrix(_rows, other._rows);
+
+  for (int i = 0; i < _rows; i++) {
+    for (int j = 0; j < other._rows; j++) {
+      for (int k = 0; k < _cols; k++) {
+        temp_matrix.matrix[i][j] += matrix[i][k] * other.matrix[j][k];
+      }
+    }
+  }
+
+  return (*this = temp_matrix);
+}
+
+Matrix &Matrix::operator^(const Matrix &other) {
+  if (_cols != other._cols) {
+    throw domain_error("Matrices must have the same dimensions");
+  }
+
+  Matrix *temp_matrix = new Matrix(_rows, other._rows);
+
+  for (int i = 0; i < _rows; i++) {
+    for (int j = 0; j < other._rows; j++) {
+      for (int k = 0; k < _cols; k++) {
+        temp_matrix->matrix[i][j] += matrix[i][k] * other.matrix[j][k];
+      }
+    }
+  }
+
+  return *temp_matrix;
+}
+
 Matrix &Matrix::operator*=(double factor) {
   for (int i = 0; i < _rows; i++) {
     for (int j = 0; j < _cols; j++) {

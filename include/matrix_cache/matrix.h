@@ -28,6 +28,8 @@ class Matrix {
   Matrix &operator-(const Matrix &);
   Matrix &operator*=(const Matrix &);
   Matrix &operator*(const Matrix &);
+  Matrix &operator^=(const Matrix &);
+  Matrix &operator^(const Matrix &);
   Matrix &operator*=(double);
   bool operator==(const Matrix &);
   bool operator!=(const Matrix &);
