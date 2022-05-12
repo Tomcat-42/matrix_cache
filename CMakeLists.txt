@@ -19,14 +19,13 @@ if((CMAKE_CXX_COMPILER_ID MATCHES GNU) OR (CMAKE_CXX_COMPILER_ID MATCHES Clang))
    set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 endif()
 
+include(CTest)
+include(GoogleTest)
+include(GoogleBenchmark)
+include(CxxOpts)
 
 include_directories( ./include )
 
 add_subdirectory(./src )
 add_subdirectory(./tests)
 add_subdirectory(./benchmarks)
-
-include(CTest)
-include(GoogleTest)
-include(GoogleBenchmark)
-
