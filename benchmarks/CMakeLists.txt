@@ -8,6 +8,7 @@ add_executable(${BINARY} ${BENCHMARK_SOURCES})
 
 target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib benchmark)
 
+install(TARGETS ${BINARY})
 
 # find_package(Threads REQUIRED)
 #

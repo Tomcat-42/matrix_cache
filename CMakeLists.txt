@@ -1,8 +1,11 @@
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/dist)
+
 # cmake version to be used
 cmake_minimum_required( VERSION 3.15 )
 
 # project name
 project( matrix_cache LANGUAGES CXX )
+
 
 # Location of additional cmake modules
 set(CMAKE_MODULE_PATH
@@ -29,3 +32,5 @@ include_directories( ./include )
 add_subdirectory(./src )
 add_subdirectory(./tests)
 add_subdirectory(./benchmarks)
+
+# install(TARGETS)
