@@ -39,8 +39,6 @@ int main(int argc, char* argv[]) {
     m1.randomize(0, 1e10);
     m2.randomize(0, 1e10);
 
-    cout << transpose << endl;
-
     mr = transpose ? m1 ^ m2.transpose() : m1 * m2;
   } catch (const cxxopts::OptionException& e) {
     cout << "error parsing options: " << e.what() << endl;

@@ -31,9 +31,6 @@ Matrix::Matrix(int rows, int cols) : _rows(rows), _cols(cols) {
   alloc_mem();
   for (int i = 0; i < rows; i++) {
     fill(matrix[i], matrix[i] + cols, 0);
-    // for (int j = 0; j < cols; j++) {
-    //   matrix[i][j] = 0;
-    // }
   }
 }
 

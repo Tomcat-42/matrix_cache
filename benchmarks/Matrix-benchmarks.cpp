@@ -76,7 +76,6 @@ static void BM_Matrix_Multiplication_transposed_without_transposition_time(
 }
 
 BENCHMARK(BM_Matrix_Constructor)
-    ->DenseRange(200, 2e3, 200)
     ->ComputeStatistics("min",
                         [](const std::vector<double> &v) -> double {
                           return *(
@@ -90,7 +89,6 @@ BENCHMARK(BM_Matrix_Constructor)
     ->DenseRange(INITIAL_SIZE, FINAL_SIZE, STEP_SIZE);
 
 BENCHMARK(BM_Matrix_Randomization)
-    ->DenseRange(200, 2e3, 200)
     ->ComputeStatistics("min",
                         [](const std::vector<double> &v) -> double {
                           return *(
@@ -104,7 +102,6 @@ BENCHMARK(BM_Matrix_Randomization)
     ->DenseRange(INITIAL_SIZE, FINAL_SIZE, STEP_SIZE);
 
 BENCHMARK(BM_Matrix_Transposition)
-    ->DenseRange(200, 2e3, 200)
     ->ComputeStatistics("min",
                         [](const std::vector<double> &v) -> double {
                           return *(
@@ -118,7 +115,6 @@ BENCHMARK(BM_Matrix_Transposition)
     ->DenseRange(INITIAL_SIZE, FINAL_SIZE, STEP_SIZE);
 
 BENCHMARK(BM_Matrix_Multiplication)
-    ->DenseRange(200, 2e3, 200)
     ->ComputeStatistics("min",
                         [](const std::vector<double> &v) -> double {
                           return *(
@@ -129,7 +125,7 @@ BENCHMARK(BM_Matrix_Multiplication)
                           return *(
                               std::max_element(std::begin(v), std::end(v)));
                         })
-    ->DenseRange(200, 400, 200);
+    ->DenseRange(INITIAL_SIZE, FINAL_SIZE, STEP_SIZE);
 
 BENCHMARK(BM_Matrix_Multiplication_transposed)
     ->ComputeStatistics("min",
